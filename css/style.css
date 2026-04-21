@@ -160,6 +160,42 @@ img {
     background: rgba(139, 92, 246, 0.08);
 }
 
+.btn-whatsapp {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: white;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+}
+
+.btn-whatsapp:active {
+    transform: translateY(0);
+}
+
+.btn-continue {
+    background: linear-gradient(135deg, #0ea5e9, #22d3ee);
+    color: white;
+    border-radius: 999px;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 16px 32px;
+    box-shadow: 0 4px 20px rgba(14, 165, 233, 0.35);
+}
+
+.btn-continue:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 28px rgba(14, 165, 233, 0.5);
+}
+
+.btn-continue:active {
+    transform: translateY(0);
+}
+
 /* Gradient Text */
 .gradient-text {
     background: var(--gradient-text);
@@ -976,10 +1012,17 @@ img {
 }
 
 .form-title {
-    font-size: 22px;
-    font-weight: 700;
-    margin-bottom: 24px;
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 6px;
     text-align: center;
+}
+
+.form-subtitle {
+    font-size: 14px;
+    color: var(--text-muted);
+    text-align: center;
+    margin-bottom: 24px;
 }
 
 .form-group {
@@ -1039,6 +1082,84 @@ img {
     color: var(--text-muted);
     text-align: center;
     margin-top: 16px;
+}
+
+/* Phone input with country selector */
+.form-phone-group label {
+    text-align: center;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.phone-input-wrapper {
+    display: flex;
+    align-items: center;
+    background: var(--bg-input);
+    border: 1px solid var(--bg-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: all var(--transition-base);
+}
+
+.phone-input-wrapper:focus-within {
+    border-color: var(--accent-purple);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+}
+
+.phone-input-wrapper.error {
+    border-color: var(--accent-red);
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+}
+
+.country-select {
+    position: relative;
+    flex-shrink: 0;
+    border-right: 1px solid var(--bg-border);
+}
+
+.country-select select {
+    appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 28px 12px 14px;
+    cursor: pointer;
+    outline: none;
+}
+
+.country-select select option {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.select-arrow {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--text-muted);
+}
+
+.phone-input-wrapper input[type="tel"] {
+    flex: 1;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 12px 14px;
+    font-size: 15px;
+}
+
+.phone-input-wrapper input[type="tel"]:focus {
+    box-shadow: none;
 }
 
 /* Button Loader */
