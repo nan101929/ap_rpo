@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaceSwap AI - Swap Any Face into Any Video in Seconds</title>
+    <meta name="description" content="Experience ultra-realistic AI face swapping. Become anyone in any video with our professional-grade tool. Fast, secure, and easy to use.">
+    <meta name="keywords" content="AI face swap, video face swap, deepfake tool, AI video editing, face replacement">
+    <meta property="og:title" content="FaceSwap AI - Ultra-Realistic Video Face Swapping">
+    <meta property="og:description" content="Swap any face into any video in seconds with professional-grade AI technology.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://faceswap-ai.com">
+    <link rel="canonical" href="https://faceswap-ai.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Analytics 4 (GA4) - Replace G-XXXXXXXXXX with your tracking ID -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    -->
+
+    <!-- Meta Pixel (Facebook) - Replace XXXXXXXXXX with your pixel ID -->
+    <!--
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'XXXXXXXXXX');
+        fbq('track', 'PageView');
+    </script>
+    -->
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="8" fill="url(#logo-gradient)"/>
+                        <path d="M10 12C10 10.8954 10.8954 10 12 10H14V14H10V12Z" fill="white"/>
+                        <path d="M18 10H20C21.1046 10 22 10.8954 22 12V14H18V10Z" fill="white"/>
+                        <path d="M10 16H22V18C22 20.2091 20.2091 22 18 22H14C11.7909 22 10 20.2091 10 18V16Z" fill="white"/>
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#8B5CF6"/>
+                                <stop offset="1" stop-color="#06B6D4"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <span class="logo-text">FaceSwap AI</span>
+            </a>
+            <nav class="nav-desktop">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#download" class="nav-link">Download</a>
+                <a href="#register" class="btn btn-primary btn-sm">Download Now</a>
+            </nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav class="nav-mobile" id="navMobile">
+            <a href="#features" class="nav-link mobile-link">Features</a>
+            <a href="#download" class="nav-link mobile-link">Download</a>
+            <a href="#register" class="btn btn-primary mobile-link">Download Now</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-glow hero-glow-1"></div>
+            <div class="hero-glow hero-glow-2"></div>
+        </div>
+        <div class="container hero-inner">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    AI-Powered Technology
+                </div>
+                <h1 class="hero-title">
+                    Swap Any Face into<br>
+                    <span class="gradient-text">Any Video</span> in Seconds
+                </h1>
+                <p class="hero-subtitle">
+                    Experience ultra-realistic AI face swapping. Become anyone in any video with our professional-grade tool. No editing skills required.
+                </p>
+                <div class="hero-cta">
+                    <a href="#register" class="btn btn-primary btn-lg">Free Registration</a>
+                    <a href="#download" class="btn btn-outline btn-lg">Download for Free</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">2M+</div>
+                        <div class="stat-label">Active Users</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50M+</div>
+                        <div class="stat-label">Videos Processed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">4.9</div>
+                        <div class="stat-label">User Rating</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="video-card">
+                    <div class="video-card-header">
+                        <div class="video-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <span class="video-label">Live Preview</span>
+                    </div>
+                    <div class="video-card-body">
+                        <div class="video-placeholder">
+                            <div class="video-icon">
+                                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="32" cy="32" r="30" stroke="url(#video-grad)" stroke-width="2"/>
+                                    <path d="M26 22L44 32L26 42V22Z" fill="url(#video-grad)"/>
+                                    <defs>
+                                        <linearGradient id="video-grad" x1="0" y1="0" x2="64" y2="64">
+                                            <stop stop-color="#8B5CF6"/>
+                                            <stop offset="1" stop-color="#06B6D4"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <p class="video-text">Before & After Comparison</p>
+                            <p class="video-sub">High-precision face swap demo</p>
+                            <button class="video-play-btn">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M6 4L16 10L6 16V4Z" fill="white"/>
+                                </svg>
+                                Play Demo
+                            </button>
+                        </div>
+                    </div>
+                    <div class="video-card-footer">
+                        <div class="video-status">
+                            <span class="status-dot"></span>
+                            Processing...
+                        </div>
+                        <div class="video-progress">
+                            <div class="progress-bar"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating-badge badge-left">
+                    <div class="fb-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M10 2C5.58 2 2 5.58 2 10C2 14.42 5.58 18 10 18C14.42 18 18 14.42 18 10C18 5.58 14.42 2 10 2ZM8.5 14L5 10.5L6.17 9.33L8.5 11.66L13.83 6.33L15 7.5L8.5 14Z" fill="#10B981"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="fb-title">Face Detected</div>
+                        <div class="fb-desc">99.8% accuracy</div>
+                    </div>
+                </div>
+                <div class="floating-badge badge-right">
+                    <div class="fb-icon" style="background: rgba(139, 92, 246, 0.15);">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M10 1L12.39 6.36L18.18 7.27L14.09 11.42L14.98 17.22L10 14.77L5.02 17.22L5.91 11.42L1.82 7.27L7.61 6.36L10 1Z" fill="#8B5CF6"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="fb-title">Quality Score</div>
+                        <div class="fb-desc">4.9 / 5.0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Why Choose Us</span>
+                <h2 class="section-title">Powerful Features,<br><span class="gradient-text">Effortless Results</span></h2>
+                <p class="section-desc">Professional-grade AI technology designed for creators, filmmakers, and anyone who wants to explore the possibilities of digital face swapping.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon icon-ai">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 4L19 10H13L16 4Z" fill="currentColor"/>
+                            <path d="M16 28L13 22H19L16 28Z" fill="currentColor"/>
+                            <path d="M28 16L22 13V19L28 16Z" fill="currentColor"/>
+                            <path d="M4 16L10 19V13L4 16Z" fill="currentColor"/>
+                            <circle cx="16" cy="16" r="5" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="16" cy="16" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Ultra-Realistic AI</h3>
+                    <p class="feature-desc">Leading AI algorithm with natural transitions and seamless blending. Our neural network ensures every swap looks authentic, never artificial or jarring.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon icon-compat">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect x="4" y="8" width="24" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M4 12H28" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 20H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="22" cy="20" r="1.5" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Universal Compatibility</h3>
+                    <p class="feature-desc">Supports MP4, MOV, AVI, and WebM formats. Advanced facial recognition works across diverse lighting conditions, angles, and ethnicities with pinpoint accuracy.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon icon-speed">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 4V8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M16 24V28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M4 16H8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M24 16H28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M7.51472 7.51472L10.3431 10.3431" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M21.6569 21.6569L24.4853 24.4853" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M7.51472 24.4853L10.3431 21.6569" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M21.6569 10.3431L24.4853 7.51472" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M16 10L19 16H13L16 22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Fast Processing</h3>
+                    <p class="feature-desc">Lightning-fast rendering powered by GPU acceleration. Process a 60-second video in under 2 minutes. No more overnight waiting for your creative projects.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon icon-privacy">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 2L4 8V14C4 21.18 9.02 27.86 16 30C22.98 27.86 28 21.18 28 14V8L16 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M12 16L15 19L20 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Privacy Guaranteed</h3>
+                    <p class="feature-desc">Your data never leaves your device unless you choose cloud processing. End-to-end encryption, automatic file deletion, and full GDPR compliance for your peace of mind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Simple Workflow</span>
+                <h2 class="section-title">Three Steps to<br><span class="gradient-text">Transform Any Video</span></h2>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Upload Your Video</h3>
+                        <p>Drag and drop any video file. Our system automatically detects all faces in the footage.</p>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Select & Upload Face</h3>
+                        <p>Choose the face to replace and upload your replacement image. AI handles alignment automatically.</p>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Generate & Download</h3>
+                        <p>Hit render and watch the magic happen. Download your transformed video in HD quality.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration / Download Section -->
+    <section class="register-section" id="register">
+        <div class="register-bg">
+            <div class="register-glow"></div>
+        </div>
+        <div class="container">
+            <div class="register-grid">
+                <div class="register-info">
+                    <span class="section-tag">Get Started</span>
+                    <h2 class="section-title">Start Creating<br><span class="gradient-text">Today</span></h2>
+                    <p class="register-desc">Join millions of creators worldwide. Register now and receive 5 free credits to experience the full power of our AI face swap technology.</p>
+                    <ul class="register-benefits">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M10 2C5.58 2 2 5.58 2 10C2 14.42 5.58 18 10 18C14.42 18 18 14.42 18 10C18 5.58 14.42 2 10 2ZM8.5 14L5 10.5L6.17 9.33L8.5 11.66L13.83 6.33L15 7.5L8.5 14Z" fill="#10B981"/>
+                            </svg>
+                            5 free credits upon registration
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M10 2C5.58 2 2 5.58 2 10C2 14.42 5.58 18 10 18C14.42 18 18 14.42 18 10C18 5.58 14.42 2 10 2ZM8.5 14L5 10.5L6.17 9.33L8.5 11.66L13.83 6.33L15 7.5L8.5 14Z" fill="#10B981"/>
+                            </svg>
+                            No credit card required
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M10 2C5.58 2 2 5.58 2 10C2 14.42 5.58 18 10 18C14.42 18 18 14.42 18 10C18 5.58 14.42 2 10 2ZM8.5 14L5 10.5L6.17 9.33L8.5 11.66L13.83 6.33L15 7.5L8.5 14Z" fill="#10B981"/>
+                            </svg>
+                            Cancel anytime
+                        </li>
+                    </ul>
+                </div>
+                <div class="register-form-wrapper">
+                    <form class="register-form" id="registerForm" novalidate>
+                        <h3 class="form-title">Create Your Free Account</h3>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                            <span class="form-error" id="emailError">Please enter a valid email address</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Min. 8 characters" required minlength="8">
+                            <span class="form-error" id="passwordError">Password must be at least 8 characters</span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-full" id="submitBtn">
+                            <span class="btn-text">Register & Get 5 Free Credits</span>
+                            <span class="btn-loader"></span>
+                        </button>
+                        <p class="form-note">By registering, you agree to our Terms of Service and Privacy Policy.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download-section" id="download">
+        <div class="container">
+            <div class="download-content">
+                <h2 class="section-title">Download the Desktop App</h2>
+                <p class="section-desc">Get the full power of FaceSwap AI on your computer. Native apps for Windows and macOS with batch processing and advanced controls.</p>
+                <div class="download-buttons">
+                    <a href="#" class="download-btn" data-os="windows">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
+                        </svg>
+                        <div class="download-btn-text">
+                            <span class="db-label">Download for</span>
+                            <span class="db-name">Windows</span>
+                        </div>
+                    </a>
+                    <a href="#" class="download-btn" data-os="macos">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                        </svg>
+                        <div class="download-btn-text">
+                            <span class="db-label">Download for</span>
+                            <span class="db-name">macOS</span>
+                        </div>
+                    </a>
+                </div>
+                <p class="download-meta" id="osDetect">Detecting your operating system...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="32" height="32" rx="8" fill="url(#logo-gradient-footer)"/>
+                                <path d="M10 12C10 10.8954 10.8954 10 12 10H14V14H10V12Z" fill="white"/>
+                                <path d="M18 10H20C21.1046 10 22 10.8954 22 12V14H18V10Z" fill="white"/>
+                                <path d="M10 16H22V18C22 20.2091 20.2091 22 18 22H14C11.7909 22 10 20.2091 10 18V16Z" fill="white"/>
+                                <defs>
+                                    <linearGradient id="logo-gradient-footer" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#8B5CF6"/>
+                                        <stop offset="1" stop-color="#06B6D4"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <span class="logo-text">FaceSwap AI</span>
+                    </a>
+                    <p class="footer-desc">Professional-grade AI face swapping for creators, filmmakers, and digital artists worldwide.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Discord" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="YouTube" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="GitHub" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#download">Download</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">API</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="disclaimer">
+                <div class="disclaimer-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M9 13H11V15H9V13ZM9 5H11V11H9V5ZM10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM10 18C5.59 18 2 14.41 2 10C2 5.59 5.59 2 10 2C14.41 2 18 5.59 18 10C18 14.41 14.41 18 10 18Z" fill="#F59E0B"/>
+                    </svg>
+                </div>
+                <div class="disclaimer-content">
+                    <strong>Disclaimer:</strong> Please use this tool responsibly. It is intended for entertainment and artistic creation only. Users are solely responsible for ensuring they have appropriate rights/permissions to the video and face imagery used. Misuse of this technology to create non-consensual explicit content, defamation, fraud, or any illegal activity is strictly prohibited and may result in permanent account termination and legal action.
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p> FaceSwap AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Download Bar -->
+    <div class="sticky-bar" id="stickyBar">
+        <div class="container sticky-inner">
+            <div class="sticky-text">
+                <strong>Ready to transform your videos?</strong>
+                <span>Get 5 free credits when you register today.</span>
+            </div>
+            <a href="#register" class="btn btn-primary btn-sm sticky-btn">Download Now</a>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M10 2C5.58 2 2 5.58 2 10C2 14.42 5.58 18 10 18C14.42 18 18 14.42 18 10C18 5.58 14.42 2 10 2ZM8.5 14L5 10.5L6.17 9.33L8.5 11.66L13.83 6.33L15 7.5L8.5 14Z" fill="#10B981"/>
+            </svg>
+        </div>
+        <div class="toast-message" id="toastMessage">Success!</div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
