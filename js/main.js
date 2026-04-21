@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMobile = document.getElementById('navMobile');
     const stickyBar = document.getElementById('stickyBar');
     const registerForm = document.getElementById('registerForm');
-    const osDetect = document.getElementById('osDetect');
     const toast = document.getElementById('toast');
     const toastMessage = document.getElementById('toastMessage');
 
@@ -130,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const fullNumber = countryCode.value + digitsOnly;
 
         // Build pre-filled WhatsApp message
-        const message = `Hi, I want to register for FaceSwap AI and claim my 5 free credits. My WhatsApp number is ${fullNumber}.`;
+        const message = `Hi, I want to register for FaceSwap AI and claim my 5 free credits. My phone number is ${fullNumber}.`;
         const encodedMessage = encodeURIComponent(message);
         const waUrl = `https://wa.me/${BUSINESS_WHATSAPP_NUMBER}?text=${encodedMessage}`;
 
@@ -140,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Open WhatsApp
         window.open(waUrl, '_blank');
 
-        showToast('WhatsApp opened! Send the message to complete registration.');
+        showToast('WhatsApp opened! Send the message to complete your registration.');
         registerForm.reset();
     });
 
@@ -153,52 +152,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (wrapper) wrapper.classList.remove('error');
         });
     }
-
-    // ============================================
-    // OS Detection for Download Section
-    // ============================================
-    function detectOS() {
-        const userAgent = navigator.userAgent;
-        let os = 'unknown';
-
-        if (userAgent.indexOf('Win') !== -1) {
-            os = 'windows';
-        } else if (userAgent.indexOf('Mac') !== -1) {
-            os = 'macos';
-        } else if (userAgent.indexOf('Linux') !== -1) {
-            os = 'linux';
-        }
-
-        const downloadBtns = document.querySelectorAll('.download-btn');
-
-        downloadBtns.forEach(btn => {
-            const btnOS = btn.getAttribute('data-os');
-            if (btnOS === os) {
-                btn.classList.add('active-os');
-            } else {
-                btn.classList.remove('active-os');
-            }
-
-            // Add click tracking
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                trackEvent('download_click', { os: btnOS });
-                showToast(`Download starting for ${btnOS === 'windows' ? 'Windows' : 'macOS'}...`);
-            });
-        });
-
-        if (osDetect) {
-            if (os === 'windows') {
-                osDetect.textContent = 'We detected you are using Windows.';
-            } else if (os === 'macos') {
-                osDetect.textContent = 'We detected you are using macOS.';
-            } else {
-                osDetect.textContent = 'Select your operating system above.';
-            }
-        }
-    }
-
-    detectOS();
 
     // ============================================
     // Scroll Animations (Intersection Observer)
@@ -220,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add fade-in class to relevant elements and observe them
     const animatedElements = document.querySelectorAll(
-        '.feature-card, .step, .register-info, .register-form-wrapper, .download-content'
+        '.feature-card, .step, .register-info, .register-form-wrapper'
     );
 
     animatedElements.forEach(el => {
