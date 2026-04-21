@@ -89,60 +89,70 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ============================================
-    // Form Validation & Submission
+    // WhatsApp Registration
     // ============================================
+    // TODO: Replace with your business WhatsApp number (digits only, no + or spaces)
+    const BUSINESS_WHATSAPP_NUMBER = '1234567890';
+
     registerForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        const email = document.getElementById('email');
-        const password = document.getElementById('password');
+        const countryCode = document.getElementById('countryCode');
+        const phoneNumber = document.getElementById('phoneNumber');
+        const phoneWrapper = document.querySelector('.phone-input-wrapper');
         const submitBtn = document.getElementById('submitBtn');
         let isValid = true;
 
         // Reset errors
-        email.classList.remove('error');
-        password.classList.remove('error');
+        phoneNumber.classList.remove('error');
+        if (phoneWrapper) phoneWrapper.classList.remove('error');
 
-        // Validate email
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email.value.trim())) {
-            email.classList.add('error');
-            isValid = false;
-        }
-
-        // Validate password
-        if (password.value.length < 8) {
-            password.classList.add('error');
+        // Validate phone number
+        const digitsOnly = phoneNumber.value.replace(/\D/g, '');
+        if (digitsOnly.length < 7) {
+            phoneNumber.classList.add('error');
+            if (phoneWrapper) phoneWrapper.classList.add('error');
             isValid = false;
         }
 
         if (!isValid) return;
 
-        // Simulate submission
+        // Show loading state briefly
         submitBtn.classList.add('loading');
         submitBtn.disabled = true;
 
-        // Simulate API delay
-        await new Promise(resolve => setTimeout(resolve, 1500));
+        await new Promise(resolve => setTimeout(resolve, 600));
 
         submitBtn.classList.remove('loading');
         submitBtn.disabled = false;
 
-        // Show success
-        showToast('Registration successful! Welcome to FaceSwap AI.');
-        registerForm.reset();
+        // Build full phone number with country code
+        const fullNumber = countryCode.value + digitsOnly;
 
-        // Track registration (placeholder for GA4 / Meta Pixel)
-        trackEvent('sign_up', { method: 'email' });
+        // Build pre-filled WhatsApp message
+        const message = `Hi, I want to register for FaceSwap AI and claim my 5 free credits. My WhatsApp number is ${fullNumber}.`;
+        const encodedMessage = encodeURIComponent(message);
+        const waUrl = `https://wa.me/${BUSINESS_WHATSAPP_NUMBER}?text=${encodedMessage}`;
+
+        // Track registration attempt
+        trackEvent('sign_up', { method: 'whatsapp' });
+
+        // Open WhatsApp
+        window.open(waUrl, '_blank');
+
+        showToast('WhatsApp opened! Send the message to complete registration.');
+        registerForm.reset();
     });
 
     // Real-time validation removal on input
-    ['email', 'password'].forEach(id => {
-        const input = document.getElementById(id);
-        input.addEventListener('input', () => {
-            input.classList.remove('error');
+    const phoneInput = document.getElementById('phoneNumber');
+    if (phoneInput) {
+        phoneInput.addEventListener('input', () => {
+            phoneInput.classList.remove('error');
+            const wrapper = document.querySelector('.phone-input-wrapper');
+            if (wrapper) wrapper.classList.remove('error');
         });
-    });
+    }
 
     // ============================================
     // OS Detection for Download Section
