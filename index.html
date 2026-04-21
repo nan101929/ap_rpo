@@ -318,34 +318,54 @@
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M10 2C5.58 2 2 5.58 2 10C2 14.42 5.58 18 10 18C14.42 18 18 14.42 18 10C18 5.58 14.42 2 10 2ZM8.5 14L5 10.5L6.17 9.33L8.5 11.66L13.83 6.33L15 7.5L8.5 14Z" fill="#10B981"/>
                             </svg>
-                            No credit card required
+                            Reply within minutes via WhatsApp
                         </li>
                         <li>
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M10 2C5.58 2 2 5.58 2 10C2 14.42 5.58 18 10 18C14.42 18 18 14.42 18 10C18 5.58 14.42 2 10 2ZM8.5 14L5 10.5L6.17 9.33L8.5 11.66L13.83 6.33L15 7.5L8.5 14Z" fill="#10B981"/>
                             </svg>
-                            Cancel anytime
+                            No credit card required
                         </li>
                     </ul>
                 </div>
                 <div class="register-form-wrapper">
                     <form class="register-form" id="registerForm" novalidate>
-                        <h3 class="form-title">Create Your Free Account</h3>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
-                            <span class="form-error" id="emailError">Please enter a valid email address</span>
+                        <h3 class="form-title">Log in to unlock your bonus</h3>
+                        <p class="form-subtitle">Claim your 5 free credits now!</p>
+                        <div class="form-group form-phone-group">
+                            <label for="phoneNumber">Please enter WhatsApp Phone number</label>
+                            <div class="phone-input-wrapper">
+                                <div class="country-select">
+                                    <select id="countryCode" name="countryCode">
+                                        <option value="+62" data-flag="ID">ID +62</option>
+                                        <option value="+81" data-flag="JP">JP +81</option>
+                                        <option value="+65" data-flag="SG">SG +65</option>
+                                        <option value="+60" data-flag="MY">MY +60</option>
+                                        <option value="+66" data-flag="TH">TH +66</option>
+                                        <option value="+84" data-flag="VN">VN +84</option>
+                                        <option value="+91" data-flag="IN">IN +91</option>
+                                        <option value="+1" data-flag="US">US +1</option>
+                                        <option value="+44" data-flag="GB">GB +44</option>
+                                        <option value="+49" data-flag="DE">DE +49</option>
+                                        <option value="+33" data-flag="FR">FR +33</option>
+                                        <option value="+86" data-flag="CN">CN +86</option>
+                                        <option value="+82" data-flag="KR">KR +82</option>
+                                        <option value="+7" data-flag="RU">RU +7</option>
+                                        <option value="+55" data-flag="BR">BR +55</option>
+                                        <option value="+61" data-flag="AU">AU +61</option>
+                                    </select>
+                                    <svg class="select-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                        <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number" required>
+                            </div>
+                            <span class="form-error" id="phoneError">Please enter a valid phone number</span>
                         </div>
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" id="password" name="password" placeholder="Min. 8 characters" required minlength="8">
-                            <span class="form-error" id="passwordError">Password must be at least 8 characters</span>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-lg btn-full" id="submitBtn">
-                            <span class="btn-text">Register & Get 5 Free Credits</span>
+                        <button type="submit" class="btn btn-continue btn-lg btn-full" id="submitBtn">
+                            <span class="btn-text">CONTINUE</span>
                             <span class="btn-loader"></span>
                         </button>
-                        <p class="form-note">By registering, you agree to our Terms of Service and Privacy Policy.</p>
                     </form>
                 </div>
             </div>
